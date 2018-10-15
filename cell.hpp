@@ -4,7 +4,7 @@
 class Cell
 {
 private:
-  int locate[2] = [-1,-1];
+  int locate[2] = {-1,-1};
   int stone = 0;
   bool can_you_put = true;
 public:
@@ -16,6 +16,6 @@ public:
   int SeeStone();
   void SeeLocate(int loc[2]);
   bool Can_You_Put();
-}
+};
 
-#endif _CELL_HPP_
+#endif

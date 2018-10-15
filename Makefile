@@ -12,4 +12,4 @@ cell.o: cell.hpp
 clean:
 	rm *.o
 allclean:
-	rm *.o doikinema
+	rm *.o osero

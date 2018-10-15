@@ -15,13 +15,14 @@ Player::~Player()
 void Player::PutStone(Cell* cell[8][8])
 {
   CheckBoard();
-  
-  int x[2] = *(locate.begin()+rand()%locate.size());
+
+  int number = rand()%locate.size();
+  int x[2] = locate[number];
   cell[x[0]][x[1]]->PutStone(color);
   locate.erase(locate.begin(),locate.end());
 }
 
 void Player::CheckBoard()
 {
-  int vec[2] = [0,0];
+  int vec[2] = {0,0};
 }

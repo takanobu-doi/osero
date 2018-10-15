@@ -28,7 +28,7 @@ Board::~Board()
 
 void Board::ShowBoard()
 {
-  string str;
+  std::string str;
 
   str = " |";
   for(int i=0;i<8;i++){
@@ -45,16 +45,16 @@ void Board::ShowBoard()
   for(int j=0;j<8;j++){
     str = y_label[j] + "|";
     for(int i=0;i<8;i++){
-      switch(cell[i][j].SeeStone()){
+      switch(cell[i][j]->SeeStone()){
       case 1:
-	str = "○" + "|";
+	str = "○|";
       case -1:
-	str = "●" + "|";
+	str = "●|";
       case 0:
-	if(cell[i][j].Can_You_Put()==true){
-	  str = " *" + "|";
+	if(cell[i][j]->Can_You_Put()==true){
+	  str = " *|";
 	}else{
-	  str = "  " + "|";
+	  str = "  |";
 	}
       default:
 	exit(EXIT_FAILURE);
@@ -63,7 +63,7 @@ void Board::ShowBoard()
     std::cout << str << std::endl;
     str = "--+";
     for(int i=0;i<8;i++){
-      str = str + "--" + "|";
+      str = str + "--|";
     }
     std::cout << str << std::endl;
   }
